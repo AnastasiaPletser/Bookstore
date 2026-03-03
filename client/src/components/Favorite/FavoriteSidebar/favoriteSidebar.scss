@@ -32,7 +32,12 @@
   &.open {
     right: 0;
   }
-
+ 
+  @media (max-width: 1200px) {
+    margin: 110px 0px;
+    width: 320px;
+    right: -320px;
+  }
   @media (max-width: 1024px) {
     margin: 235px 0px;
     width: 320px;
@@ -40,14 +45,19 @@
   }
 
   @media (max-width: 850px) {
-    margin: 270px 90px;
+    width: 280px;
+    right: -280px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
     width: 280px;
     right: -280px;
     padding: 20px;
   }
 
     @media (max-width: 600px) {
-    margin: 320px 0px;
+    margin: 270px 0px;
     width: 280px;
     right: -280px;
     padding: 20px;

@@ -9,11 +9,12 @@ const ProductCatalog = () => {
 
   const calculatePerPage = () => {
     const width = window.innerWidth;
-
-    if (width < 600) return 4;
-    if (width < 900) return 6;
-    if (width < 1200) return 9;
+    
+    if (width < 840) return 6;
+    if (width < 1000) return 9;
+    if (width < 1200) return 12;
     return 12;
+    
   };
 
   const [productsPerPage, setProductsPerPage] = useState(calculatePerPage());

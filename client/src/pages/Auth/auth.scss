@@ -130,14 +130,29 @@
     gap: 16px;
   }
   .auth-page{
-     min-height: 20px;
+        min-height: calc(70vh - 100px);
   }
 }
 
 @media (max-width: 768px) {
+   .auth {
+     height: auto;
+    padding: 30px 20px;
+    border-left: 5px solid #e85a2a;
+  }
+  
   .card-books img {
     height: auto;
     display: none;
+  }
+  .auth-page{
+        min-height: calc(87vh - 100px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth-page{
+        min-height: calc(87vh - 100px);
   }
 }
 

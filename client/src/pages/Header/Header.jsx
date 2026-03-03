@@ -49,10 +49,11 @@ const Header = observer(({ openFavorite }) => {
   return (
     <header className="header">
       <div className="header__top">
-        <p> +38(099)195-00-00 | Працюємо 7 днів на тиждень | 9:00-18:00 </p>
+        <p> +38(044)195-14-00 | Працюємо 7 днів на тиждень | 9:00-18:00 </p>
       </div>
 
       <div className="header__bottom">
+      
         <div className="header__logo">
           <h1 className="bookstore-title">
             <NavLink to="/" className="bookstore-title-link">

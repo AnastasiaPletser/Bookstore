@@ -1,16 +1,13 @@
  .paginated-products {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
   padding: 16px;
 
-  .products-grid {
-     display: grid;
-  justify-content: center; 
-  grid-template-columns: repeat(auto-fit, 300px);
-  gap: 22px;
-  width: 100%;
+  @media (min-width: 400px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (min-width: 600px) {
@@ -22,8 +19,7 @@
 
   @media (min-width: 900px) {
     .products-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+       grid-template-columns: repeat(1, 1fr);
     }
   }
 

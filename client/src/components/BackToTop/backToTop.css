@@ -28,3 +28,9 @@
         opacity: 1;
     }
         
+ @media (max-width: 600px) {
+    .back-to-top {
+    right: 40px;
+    bottom: 15px;
+    }
+  }

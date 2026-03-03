@@ -183,37 +183,52 @@
 }
 
 @media (max-width: 1024px) {
-
   .book-hero {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .book-info {
-    margin: 20px;
+    margin: 0;
   }
 
   .product-details__image {
-    width: 100%;
+    width: 70%;
+    max-width: 500px;
   }
 
-  .nav-button {
-    &.left { left: 10px; }
-    &.right { right: 10px; }
+  .nav-button.left {
+    left: 10px;
+  }
+
+  .nav-button.right {
+    right: 10px;
   }
 }
-
 @media (max-width: 768px) {
+  .book-page {
+    padding: 20px 15px 60px;
+  }
+
+  .go-back-button {
+    position: static;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 
   .product-gallery {
     flex-direction: column;
-    padding: 30px 15px;
+    gap: 15px;
+    padding: 0;
   }
 
   .thumbnail-container {
     flex-direction: row;
     max-height: none;
     overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    justify-content: center;
   }
 
   .thumbnail {
@@ -221,8 +236,17 @@
     height: 60px;
   }
 
+  .main-image-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-details__image {
+    max-width: 100%;
+  }
+
   .title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .price {
@@ -231,22 +255,26 @@
 
   .buy {
     width: 100%;
+    font-size: 16px;
   }
 
-  .book-description p {
-    font-size: 15px;
+  .book-description {
+    padding-top: 20px;
+
+    p {
+      font-size: 15px;
+    }
   }
 }
-
 @media (max-width: 480px) {
-
-  .product-details__image {
-    border-radius: 8px;
-  }
-
   .thumbnail {
     width: 50px;
     height: 50px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 4px 8px;
   }
 
   .title {
@@ -256,9 +284,4 @@
   .price {
     font-size: 20px;
   }
-
-  .book-page {
-    padding: 20px 10px 60px;
-  }
 }
-

@@ -71,7 +71,8 @@ export const resolvers = {
           .on("error", reject);
       });
 
-      return `http://localhost:5001/uploads/${filename}`;
+      // return `http://localhost:5001/uploads/${filename}`;
+      return `https://bookstore-bdsa.onrender.com/uploads/${filename}`;
     },
 
     updateProduct: async (_, { input }) => {
@@ -112,7 +113,8 @@ export const resolvers = {
             .on("error", reject);
         });
 
-        uploadedUrls.push(`http://localhost:5001/uploads/${filename}`);
+        // uploadedUrls.push(`http://localhost:5001/uploads/${filename}`);
+        uploadedUrls.push(`https://your-api.onrender.com/uploads/${filename}`);
       }
 
       return uploadedUrls;

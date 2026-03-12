@@ -15,7 +15,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/upload-multiple", upload.array("files", 10), (req, res) => {
-  const urls = req.files.map(file => `http://localhost:5001/uploads/${file.filename}`);
+  // const urls = req.files.map(file => `http://localhost:5001/uploads/${file.filename}`);
+   const urls = req.files.map(file => `https://bookstore-bdsa.onrender.com/uploads/${file.filename}`);
   res.json(urls);
 });
 

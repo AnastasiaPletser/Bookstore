@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { CREATE_PRODUCT } from "../../graphql/mutations";
 import OrderSuccessModal from "../../components/OrderSuccessModal/OrderSuccessModal";
 import ProductForm from "../../components/ProductForm/ProductForm";
-import "./temp.scss";
+import "./addProduct.scss";
 
 const NO_IMAGE_PLACEHOLDER = "/images/no-image.png";
 

@@ -27,11 +27,7 @@ footer, header, hgroup, menu, nav, section {
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.2)
   ),
-  /* url('https://images.pexels.com/photos/2768396/pexels-photo-2768396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-color: white; */
+
 }
 body {
 	line-height: 1;

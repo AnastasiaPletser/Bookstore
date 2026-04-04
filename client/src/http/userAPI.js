@@ -34,15 +34,18 @@ export const login = async (email, password) => {
 };
 
 export const check = async () => {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    return null; 
+  }
+
   try {
     const { data } = await $authHost.get("api/user/auth");
     localStorage.setItem("token", data.token);
     return jwtDecode(data.token);
   } catch (error) {
-    console.error(
-      "Помилка перевірки токена:",
-      error.response?.data?.message || error.message
-    );
-    throw error;
+    console.log("Не авторизований");
+    return null; 
   }
 };

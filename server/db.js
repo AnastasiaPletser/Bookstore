@@ -11,8 +11,16 @@ const sequelize = new Sequelize(
     dialect: "postgres", 
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    logging: false 
+    logging: false, 
+     dialectOptions: {
+      ssl: process.env.DB_HOST === "localhost" ? false : {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   }
 );
 
 export default sequelize;
+
+

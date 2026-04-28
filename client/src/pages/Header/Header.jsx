@@ -53,14 +53,18 @@ const Header = observer(({ openFavorite }) => {
       </div>
 
       <div className="header__bottom">
-      
+       
         <div className="header__logo">
           <h1 className="bookstore-title">
             <NavLink to="/" className="bookstore-title-link">
               Librix
             </NavLink>
+
+
           </h1>
-        </div>
+          
+        </div> 
+        
 
         <Search />
 

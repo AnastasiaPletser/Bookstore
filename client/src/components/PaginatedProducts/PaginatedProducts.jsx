@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Products from "../Product/ProductList.jsx";
-import "./paginatedProducts.css";
+import "./PaginatedProducts.css";
 
 export default function PaginatedProducts({ products, productsPerPage = 10 }) {
   const [currentPage, setCurrentPage] = useState(1);

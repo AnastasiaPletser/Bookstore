@@ -41,7 +41,7 @@ const Search = () => {
     }, 350);
 
     return () => clearTimeout(delay);
-  }, [name]);
+    }, [name, searchProducts]);
 
   useEffect(() => {
     if (data?.searchProducts) {

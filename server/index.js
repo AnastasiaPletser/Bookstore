@@ -19,10 +19,20 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-app.use(cors({
-  origin: "http://localhost:3000"
 
-}));
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://bookstore-ten-phi.vercel.app",
+  "https://bookstore-erbdhnlon-anastasiapletser-projects.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "static")));
 app.use(fileUpload({}));

@@ -71,7 +71,7 @@ export const resolvers = {
           .on("error", reject);
       });
 
-      return `${process.env.SERVER_URL}/uploads/${filename}`;
+      return `http://localhost:5001/uploads/${filename}`;
     },
 
     updateProduct: async (_, { input }) => {
@@ -112,7 +112,7 @@ export const resolvers = {
             .on("error", reject);
         });
 
-        uploadedUrls.push(`${process.env.SERVER_URL}/uploads/${filename}`);
+        uploadedUrls.push(`http://localhost:5001/uploads/${filename}`);
       }
 
       return uploadedUrls;

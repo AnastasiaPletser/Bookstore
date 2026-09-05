@@ -15,7 +15,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/upload-multiple", upload.array("files", 10), (req, res) => {
-  const urls = req.files.map(file => `http://localhost:5001/uploads/${file.filename}`);
+  const urls = req.files.map(
+  file => `${process.env.SERVER_URL}/uploads/${file.filename}`
+);
   res.json(urls);
 });
 

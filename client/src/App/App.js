@@ -38,13 +38,16 @@ const App = observer(() => {
       .finally(() => setLoading(false));
   }, [user]);
 
-  if (loading) {
-    return (
-      <div className="spinner-container">
-        <Spinner animation="grow" />
-      </div>
-    );
-  }
+ if (loading) {
+  return (
+    <div className="spinner-container">
+      <Spinner animation="grow" role="status" />
+      <p className="loading-message">
+        Сервер запускається. Це може зайняти до однієї хвилини...
+      </p>
+    </div>
+  );
+}
 
   return (
     <CartProvider>

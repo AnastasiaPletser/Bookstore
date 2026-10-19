@@ -1,62 +1,53 @@
-
 .container__top {
   background-color: #f5f1e8;
-  padding: 1px 0 0;
-  width: 100%;
+  padding: 1px;
 }
 
 .content__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
-  width: 100%;
-  max-width: 1400px;
+  gap: 40px;
   min-height: 400px;
-  box-sizing: border-box;
-  margin: 30px auto;
-  padding: 0 24px;
-}
-
-.advertisement-left,
-.advertisement-right {
-  min-width: 0;
-  box-sizing: border-box;
+  max-width: 1200px;
+  border-radius: 1%;
+  margin: 30px auto;   
+  padding: 0 20px;
 }
 
 .advertisement-left {
-  flex: 1 1 50%;
+  flex: 1 1 450px;
   max-width: 600px;
-  padding: 20px;
   text-align: center;
   font-family: "DM Serif Text", serif;
   font-style: italic;
   color: #3b0009;
-}
-
-.advertisement-left h4 {
-  margin-top: 0;
+  padding: 20px;
 }
 
 .advertisement-left p {
   font-family: Georgia, serif;
-  line-height: 1.5;
 }
 
 .advertisement-right {
-  flex: 1 1 50%;
+  flex: 1 1 550px;
   max-width: 800px;
   height: 300px;
   position: relative;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advertisement-right img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   border-radius: 12px;
 }
 
@@ -67,30 +58,53 @@
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1400px) {
   .content__top {
-    flex-direction: column;
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content__top {
     gap: 20px;
     min-height: auto;
-    margin: 20px auto;
-    padding: 0 16px;
   }
 
   .advertisement-left {
-    width: 100%;
-    max-width: 600px;
-    padding: 10px 0;
+    flex: 1 1 50%;
+    padding: 10px;
   }
 
   .advertisement-right {
-    width: 100%;
-    max-width: 600px;
-    flex: 0 0 auto;
+    flex: 1 1 50%;
     height: 260px;
   }
 }
 
+@media (max-width: 768px) {
+  .content__top {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 12px;
+  }
+
+  .advertisement-left {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .advertisement-right {
+    width: 100%;
+    max-width: 500px;
+    height: 240px;
+  }
+}
+
 @media (max-width: 480px) {
+  .content__top {
+    gap: 15px;
+  }
+
   .advertisement-left {
     font-size: 14px;
     line-height: 1.4;
@@ -105,3 +119,5 @@
     margin-top: 15px;
   }
 }
+
+
